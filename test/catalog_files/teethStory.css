@@ -1,0 +1,241 @@
+.indicationUp {
+    display: block;
+    height: 80px;
+    width: 42px;
+    float: left;
+    position: relative;
+    top: 35px;
+}
+
+.indicationUp h2 {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    bottom: -30px;
+    left: 6px;
+}
+
+.active {
+    width: 30px;
+    height: 80px;
+    border: 1px solid #ffabac;
+    margin: 0 5px;
+    box-shadow: 0 0 10px red;
+    opacity: 0;
+    /*border-radius: 20px;*/
+    border-radius: 10px;
+    background: rgba(255, 171, 172, .3);
+}
+
+.indicationUp .active h2 {
+    -webkit-box-shadow: 0 3px 5px silver;
+    -moz-box-shadow: 0 3px 5px silver;
+    box-shadow: 0 3px 5px silver;
+}
+
+.indicationUp .active h2:hover {
+    -webkit-box-shadow: 0 1px 1px gray;
+    -moz-box-shadow: 0 1px 1px gray;
+    box-shadow: 0 1px 1px gray;
+}
+
+.active h2:hover .history {
+    display: block;
+}
+/* --==========================================================-- */
+.indicationDown {
+    display: block;
+    height: 80px;
+    width: 42px;
+    float: left;
+    position: relative;
+    bottom: 35px;
+}
+
+.indicationDown h2 {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    top: -30px;
+    left: 6px;
+}
+
+.indicationDown .active h2 {
+    webkit-box-shadow: 0 -3px 5px silver;
+    -moz-box-shadow: 0 -3px 5px silver;
+    box-shadow: 0 -3px 5px silver;
+}
+
+.indicationDown .active h2:hover {
+    -webkit-box-shadow: 0 -1px 1px gray;
+    -moz-box-shadow: 0 -1px 1px gray;
+    box-shadow: 0 -1px 1px gray;
+}
+/* --==========================================================-- */
+
+.b11 {
+    background: url("teeth/11.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b12 {
+    background: url("teeth/12.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b13 {
+    background: url("teeth/13.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b14 {
+    background: url("teeth/14.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b15 {
+    background: url("teeth/15.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b16 {
+    background: url("teeth/16.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b17 {
+    background: url("teeth/17.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b18 {
+    background: url("teeth/18.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b21 {
+    background: url("teeth/21.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b22 {
+    background: url("teeth/22.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b23 {
+    background: url("teeth/23.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b24 {
+    background: url("teeth/24.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b25 {
+    background: url("teeth/25.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b26 {
+    background: url("teeth/26.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b27 {
+    background: url("teeth/27.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b28 {
+    background: url("teeth/28.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b31 {
+    background: url("teeth/31.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b32 {
+    background: url("teeth/32.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b33 {
+    background: url("teeth/33.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b34 {
+    background: url("teeth/34.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b35 {
+    background: url("teeth/35.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b36 {
+    background: url("teeth/36.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b37 {
+    background: url("teeth/37.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b38 {
+    background: url("teeth/38.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b41 {
+    background: url("teeth/41.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b42 {
+    background: url("teeth/42.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b43 {
+    background: url("teeth/43.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b44 {
+    background: url("teeth/44.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b45 {
+    background: url("teeth/45.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b46 {
+    background: url("teeth/46.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b47 {
+    background: url("teeth/47.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.b48 {
+    background: url("teeth/48.jpg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+}

@@ -1,4 +1,3 @@
-
 @charset "utf-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;	font-size: 100%;font: inherit;vertical-align: baseline;}
 /* HTML5 display-role reset for older browsers */
@@ -42,7 +41,7 @@ div.header-rotator ul li {float:left; position:absolute; list-style: none;}
 div.header-rotator ul li.show {z-index:500;}
 .global-contact {position: absolute; bottom: 12px; right: 6px; z-index: 1000;}
 button::-moz-focus-inner /*Remove button padding in FF*/
-{ 
+{
     border: 0;
     padding: 0;
 }
@@ -118,49 +117,57 @@ article .sub-block.purpur {background-color:#ffcef2; border:1px solid #d4029b;}
 
 .zub_sch {
 	position: relative;
-	border: 1px solid red;
-	width: 635px;
+	border: 1px solid white;
+	width: 672px;
 	height: 340px;
-	background-image: url(zub_sch_o.jpg);
+	/*background-image: url(zub_sch_o.jpg);*/
 	background-size: 100%;
 	margin: 0;
 }
 
-.zub_sch .indicationCoverUp {
-	margin: 35px 0 0 70px;
+.zub_sch h2.left {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-.zub_sch .indicationCoverUp .indicationUp {
+.zub_sch h2.right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.zub_sch .indicationCoverUp {
+	margin: 0;
+}
+
+/*.zub_sch .indicationCoverUp .indicationUp {
 	float: left;
 	width: 22px;
 	height: 25px;
-	/*border: 1px solid rgba(255, 0, 0, 1);*/
+	border: 1px solid rgba(255, 0, 0, 1);
 	background: rgba(255, 0, 0, .2);
 	margin: 0 5px;
 	border-radius: 20px;
 	box-shadow: 0 2px 6px gray;
 	transition: all .3s linear;
 	opacity: 0;
-}
+}*/
 
 .zub_sch .indicationCoverUp .indicationUp:hover, .zub_sch .indicationCoverDown .indicationDown:hover {
 	cursor: pointer;
 	box-shadow: none;
 }
 
-.zub_sch .indicationCoverUp .indicationUp:hover .history, .zub_sch .indicationCoverDown .indicationDown:hover .history {
-	opacity: 1;
-}
-
 .zub_sch .indicationCoverDown {
-	margin: 258px 0 0 10px;
+	margin: 258px 0 0;
 }
 
-.zub_sch .indicationCoverDown .indicationDown {
+/*.zub_sch .indicationCoverDown .indicationDown {
 	float: left;
 	width: 25px;
 	height: 25px;
-	/*border: 1px solid rgba(255, 0, 0, 1);*/
+	border: 1px solid rgba(255, 0, 0, 1);
 	background: rgba(255, 0, 0, .2);
 	margin: 0 7px;
 	border-radius: 20px;
@@ -168,7 +175,7 @@ article .sub-block.purpur {background-color:#ffcef2; border:1px solid #d4029b;}
 	position: relative;
 	box-shadow: 0 2px 6px gray;
 	transition: all .3s linear;
-}
+}*/
 
 .zub_sch .indicationCoverDown .indicationDown h2 {
 	line-height: 25px;
@@ -176,22 +183,30 @@ article .sub-block.purpur {background-color:#ffcef2; border:1px solid #d4029b;}
 }
 
 .history {
-	opacity: 0;
-	position: absolute;	
-	box-shadow: 0 2px 6px gray;
+	display: none;
+	position: absolute;
+	-webkit-box-shadow: 0 3px 6px gray;
+	-moz-box-shadow: 0 3px 6px gray;
+	box-shadow: 0 3px 6px gray;
 	/*width: 200px;
 	height: 50px;*/
 	background: white;
-	transition: all .3s linear;
 	padding: 10px;
+	z-index: 100;
 }
 
-.zub_sch .indicationCoverDown .history {	
+.indicationDown .history {
+	-webkit-box-shadow: 0 -3px 6px gray;
+	-moz-box-shadow: 0 -3px 6px gray;
+	box-shadow: 0 -3px 6px gray;
+}
+
+.zub_sch .indicationCoverDown .history {
 	bottom: 100%;
 }
 
-.zub_sch .indicationCoverUp .history {	
-	bottom: 50%;
+.zub_sch .indicationCoverUp .history {
+	top: 100%;
 }
 
 footer {background-color: #8CC3DB;border-top:1px solid #d6edf9; border-bottom:none; height:46px; width:1000px; margin:10px auto 0;-webkit-border-bottom-right-radius: 12px;-webkit-border-bottom-left-radius: 12px;-moz-border-radius-bottomright: 12px;-moz-border-radius-bottomleft: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;
@@ -345,7 +360,7 @@ transform: scale(1.5) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);}
 
 .clientSearch .search {
 	width: 950px;
-	margin: auto;	
+	margin: auto;
 }
 
 .clientSearch h2 {
@@ -393,7 +408,7 @@ transform: scale(1.5) rotate(0deg) translate(0px, 0px) skew(0deg, 0deg);}
 	transition: all .3 linear;
 }
 
-.clientSearch #searchButton:hover {	
+.clientSearch #searchButton:hover {
 	box-shadow: 0 0 6px gray;
 }
 

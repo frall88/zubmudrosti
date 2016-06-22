@@ -6,7 +6,7 @@ $("#searchButton").click(function() {
         'fio': $("#fio").val(),
         'birthdate': $("#birthdate").val()
     }
-    
+
     $.ajax({
         type: "POST",
         url: "./catalog_files/search.php",
@@ -20,12 +20,12 @@ $("#searchButton").click(function() {
             if (events.events == -1){
                 html = '<p class="alert">Заполните, пожалуйста, поля ввода для поиска.</p>';
                 $('#eventResult').html(html);
-                return; 
+                return;
             }
             if (events.events == "No such client"){
                 html = '<p class="alert">Пациента нет в базе данных. Проверьте корректность введенных данных или зарегистрируйтесь.</p>';
                 $('#eventResult').html(html);
-                return; 
+                return;
             }
             html = '<table id="clientEvents"><caption>История лечения</caption><tr>';
             html += '<th>Дата посещения</th>';
@@ -77,7 +77,7 @@ $(".fancybox").fancybox({
     }
 });
 
-    
+
 function isValidDate(val)
 {
   var val_r = val.split("-");
@@ -98,21 +98,20 @@ function toothFire(data){
 };
 
 function teethClear(){
-    $( ".history" ).each(function() {        
+    $( ".history" ).each(function() {
         $( this ).html("");
     });
-    $( ".indicationUp" ).css("opacity", "0");
-    $( ".indicationDown" ).css("opacity", "0");
+    $( ".active" ).css("opacity", "0");
 };
 //Аякс отправка формы регистрации пациента
 //Документация: http://api.jquery.com/jquery.ajax/
 $("#regClient").submit(function() {
     params = $("#regClient").serialize();
-    bdate = document.getElementsByName("Дата рождения:")[0].value;    
+    bdate = document.getElementsByName("Дата рождения:")[0].value;
     //if (!isValidDate(bdate)){
     //    alert("Неверный формат даты! Следуйте, пожалуйста, шаблону 'гггг-мм-дд'");
     //    return;
-    //}    
+    //}
     $.ajax({
         type: "POST",
         url: "./catalog_files/client_register.php",
@@ -137,7 +136,7 @@ $("#regClient").submit(function() {
         }).done(function(data){
             //console.log('mail sent');
             //console.log(data);
-        });            
+        });
         setTimeout(function() {
             $.fancybox.close();
         }, 1000);
