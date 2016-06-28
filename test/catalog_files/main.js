@@ -93,7 +93,7 @@ function toothFire(data){
     var id = "#active" + data.toothcode;
     $( id ).css( "opacity", "1" );
     var info = $( id + " .history" ).html();
-    info += data.opertype + "<br>";
+    info += "<p style='border-bottom: 1px solid silver;'>" + data.opertype + "</p>";
     $( id + " .history" ).html(info);
 };
 

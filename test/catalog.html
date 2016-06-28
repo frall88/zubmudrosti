@@ -37,7 +37,7 @@
     <div class="clear"></div>
   </header>
   <div class="main index">
-    <div class="left-container">
+    <div>
       <br>
       <article>
       	<div class="zub_sch">
@@ -85,9 +85,9 @@
         <br>-->
        </article>
         </div>
-    <div class="right-container">
+    <!--<div class="right-container">
       <img src="./catalog_files/postoyannye-zubi.jpg" width="320" height="350" alt="Постоянные зубы" title="Постоянные зубы" style="margin-right: 0; float: right;">
-    </div>
+    </div>-->
     <div class="clear"></div>
   </div>
   <section class="clientSearch">
@@ -109,8 +109,8 @@
 		<form id="regClient">
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="zubmudrosti.com">
-      <input type="hidden" name="service_email" value="zubmudrosti.com@gmail.com">
-			<input type="hidden" name="admin_email" value="frall712@gmail.com">
+            <input type="hidden" name="service_email" value="zubmudrosti.com@gmail.com">
+			<input type="hidden" name="admin_email" value="fortuna.valeriya@mail.ru">
 			<input type="hidden" name="form_subject" value="Регистрация пациента">
 			<!-- END Hidden Required Fields -->
 
@@ -131,7 +131,7 @@
 			<legend>Контактные данные</legend>
 			<p><label for="Телефон">№ телефона</label><input type="tel" pattern="\(\d\d\d\) ?\d\d\d-\d\d-\d\d" name="Телефон:" placeholder="(xxx) xxx-xx-xx"></p><br>
 			<div class="clear"></div>
-			<p><label for="E-mail">E-Mail</label><input type="email" name="E-mail:"></p><br>
+			<p><label for="E-mail">E-Mail</label><input type="email" name="E-mail:" required=""></p><br>
 			</fieldset>
 			<button class="button" type="submit">Зарегистрироваться</button>
 		</form>

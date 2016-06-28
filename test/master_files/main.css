@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background: silver;
+	padding: 25px 0;
+}
+
+body {
+	width: 900px;
+	background: white;
+	box-shadow: 0 0 6px gray;
+	margin: auto;
+	padding: 25px;
+}
+
+h1, h2, h3, h4 {
+	text-align: center;
+	margin: 10px 0;
+	text-shadow: 1px 2px 3px gray;
+}
+
+h3 {
+	color: #8B4513;
+}
+
+.button {
+	border: none;
+	background: #CD7054; /* #FFA54F;*/
+	color: white;
+	text-shadow: 1px 2px 3px gray;
+	-webkit-transition: all .3 linear;
+	-moz-transition: all .3 linear;
+	-o-transition: all .3 linear;
+	transition: all .3 linear;
+}
+
+.button:hover {
+	background: #EE8262 ;/* #EE9A49; */
+	cursor: pointer;
+	-webkit-box-shadow: 0 0 6px gray;
+	-moz-box-shadow: 0 0 6px gray;
+	-ms-box-shadow: 0 0 6px gray;
+	-o-box-shadow: 0 0 6px gray;
+	box-shadow: 0 0 6px gray;
+}
+
+.button:active {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+
+label {
+	display: block;
+	width: 550px;
+	height: 40px;
+	margin: 5px 0;
+	line-height: 40px;
+	padding-left: 25px;
+	color: #8B4726;
+	text-shadow: 1px 2px 3px gray;
+	font-size: 18px;
+}
+
+input, select {
+	display: block;
+	width: 300px;
+	float: right;
+	height: 30px;
+	text-align: center;
+	margin: 5px;
+	font-size: 16px;
+}
+
+.newEvent input:focus {
+	width: 350px;
+	transition: width .3s ease;/*Изменить на правильное*/
+}
+
+.newEvent select {
+	width: 50px;
+	margin-right: 255px;
+	font-size: 17px;
+}
+
+.newClients, .newEvent, .search {
+	border: 2px solid #DEB887;
+	margin: 5px 0 25px;
+	padding: 0 0 10px;
+}
+
+.search {
+	padding-top: 10px;
+}
+
+.newClients input, input#addEventButton, input#searchButton, input#clearEventButton {
+	float: none;
+	width: 200px;
+	margin: 10px auto;
+}
+
+.cover {
+	width: 340px;
+	height: 50px;
+	margin: auto;
+}
+
+.newClients input#doneclid {
+	float: left;
+	width: 100px;
+}
+
+.newClients input#doneClientButton {
+	float: right;
+}
+
+input#fio {
+	float: left;
+	margin: 8px 0 0 25px;
+}
+
+select#selectClient {
+	float: left;
+	margin: -8px 0 0 25px;
+}
+
+.clear {
+	clear: both;
+}
+
+input.button:focus {
+  outline: none;  /* убрать рамку */
+  }
+
+
+table caption {
+	padding: 5px;
+	font: italic 16px Georgia;
+}
+
+
+table {
+	margin-top: 15px;
+	color: gray;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, th{
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: center;
+    padding: 5px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+	text-shadow: 1px 2px 3px gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #FFA54F;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+}

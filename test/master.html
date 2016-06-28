@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Стоматология в Днепропетровске - Зуб мудрости - персональный сайт практикующего стоматолога | Медицинские карты</title>
+<link type="text/css" rel="stylesheet" href="./master_files/main.css">
+</head>
+
+<body>
+    <h3>Новые пациенты для заполнения мед. карты</h3>
+    <div class="newClients">
+        <input type="button" id="newsButton" class="button" value="Просмотреть">
+        <div id="newsResult"></div>
+        <h4>Отметить отработанного пациента</h4>
+        <div class="cover">
+            <p><input type="text" id="doneclid" required="" placeholder="ID пациента">
+            <input type="button" id="doneClientButton" class="button" value="Отработан"></p>
+        </div>
+        <div class="clear"></div>
+    </div>
+        <h3>Форма добавления новой записи в карту</h3>  
+    <div class="newEvent">      
+        <p><label for="Ид.Клиента">Ид.Пациента<input type="text" id="clientid" required=""></label></p>
+        <p><label for="Дата посещения">Дата посещения<input type="date" placeholder="гггг-мм-дд" id="visitdate"></label></p>
+        <p><label for="Тип операции">Тип операции<input type="text" id="opertype" required=""></label></p>
+        <p><label for="Номер зуба">Номер зуба
+            <select id="toothcode">
+                <option selected value="NULL">--</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>            
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+            </select>
+        </label></p>
+        <p><label for="Заключение">Заключение<input type="text" id="conclusion" required=""></label></p>
+        <input type="button" id="addEventButton" class="button" value="Добавить">
+        <input type="button" id="clearEventButton" class="button" value="Очистить">
+        <div class="clear"></div>
+    </div>
+        <h3>Введите ФИО пациента для поиска</h3>
+    <div class="search">
+        <input type="text" name="fio" id="fio">
+        <input type="button" id="searchButton" class="button" value="Поиск">
+        <div id="searchResult"></div>
+        <div id="eventResult"></div>
+        <div class="clear"></div>
+    </div>
+    <script src="./master_files/jquery-1.11.1.min.js"></script> 
+    <script src="./master_files/main.js"></script>
+</body>
+</html>

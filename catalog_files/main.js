@@ -1,12 +1,12 @@
 //Аякс отправка форм
    //Документация: http://api.jquery.com/jquery.ajax/
 $("#searchButton").click(function() {
-
+    teethClear();
     var params = {
         'fio': $("#fio").val(),
         'birthdate': $("#birthdate").val()
     }
-    
+
     $.ajax({
         type: "POST",
         url: "./catalog_files/search.php",
@@ -20,12 +20,12 @@ $("#searchButton").click(function() {
             if (events.events == -1){
                 html = '<p class="alert">Заполните, пожалуйста, поля ввода для поиска.</p>';
                 $('#eventResult').html(html);
-                return; 
+                return;
             }
             if (events.events == "No such client"){
                 html = '<p class="alert">Пациента нет в базе данных. Проверьте корректность введенных данных или зарегистрируйтесь.</p>';
                 $('#eventResult').html(html);
-                return; 
+                return;
             }
             html = '<table id="clientEvents"><caption>История лечения</caption><tr>';
             html += '<th>Дата посещения</th>';
@@ -37,6 +37,7 @@ $("#searchButton").click(function() {
                     events.events[i].opertype + '</td><td>' +
                     events.events[i].toothcode + '</td><td>' +
                     events.events[i].conclusion + '</td></tr>';
+                    toothFire(events.events[i]);
             }
             html += '</table>';
         } else {
@@ -76,28 +77,41 @@ $(".fancybox").fancybox({
     }
 });
 
-    
+
 function isValidDate(val)
 {
-  var val_r = val.split("-");  
-  var curDate = new Date(parseInt(val_r[0]), parseInt(val_r[1])-1, parseInt(val_r[2]));      
+  var val_r = val.split("-");
+  var curDate = new Date(val_r[0], val_r[1], val_r[2]);
   return (
     curDate.getFullYear() == val_r[0]
-    && curDate.getMonth()+1 == val_r[1]
+    && curDate.getMonth() == val_r[1]
     && curDate.getDate() == val_r[2]
   );
 };
 
+function toothFire(data){
+    var id = "#active" + data.toothcode;
+    $( id ).css( "opacity", "1" );
+    var info = $( id + " .history" ).html();
+    info += "<p style='border-bottom: 1px solid silver;'>" + data.opertype + "</p>";
+    $( id + " .history" ).html(info);
+};
+
+function teethClear(){
+    $( ".history" ).each(function() {
+        $( this ).html("");
+    });
+    $( ".active" ).css("opacity", "0");
+};
 //Аякс отправка формы регистрации пациента
 //Документация: http://api.jquery.com/jquery.ajax/
 $("#regClient").submit(function() {
     params = $("#regClient").serialize();
-    bdate = document.getElementsByName("Дата рождения:")[0].value; 
-
-    if (!isValidDate(bdate)){
-        alert("Неверный формат даты ["+bdate+"]! Следуйте, пожалуйста, шаблону 'гггг-мм-дд'");
-        return;
-    }    
+    bdate = document.getElementsByName("Дата рождения:")[0].value;
+    //if (!isValidDate(bdate)){
+    //    alert("Неверный формат даты! Следуйте, пожалуйста, шаблону 'гггг-мм-дд'");
+    //    return;
+    //}
     $.ajax({
         type: "POST",
         url: "./catalog_files/client_register.php",
@@ -109,14 +123,6 @@ $("#regClient").submit(function() {
         if (recv.rowcount == 1){
             tomail['Сохранено в базе:'] = "Да";
             alert("Вы успешно зарегистрировались! Информация будет доступна после обработки администратором.");
-        } else if (recv.errmes == 'User already exists!') {
-            tomail['Сохранено в базе:'] = "Нет";
-            tomail['Ошибка:'] = recv.errmes;
-            alert("Пользователь " + tomail["Фамилия:"]+" "
-                + tomail["Имя:"]+" "
-                + tomail["Отчество:"]+" "
-                + tomail["Дата_рождения:"]
-                + " уже заведен в базе данных.");
         } else {
             tomail['Сохранено в базе:'] = "Нет";
             tomail['Ошибка:'] = recv.errmes;
@@ -130,7 +136,7 @@ $("#regClient").submit(function() {
         }).done(function(data){
             //console.log('mail sent');
             //console.log(data);
-        });            
+        });
         setTimeout(function() {
             $.fancybox.close();
         }, 1000);
