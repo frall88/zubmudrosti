@@ -2,17 +2,18 @@
    //Документация: http://api.jquery.com/jquery.ajax/
 $("#searchButton").click(function() {
     teethClear();
+    var bdate = dateFormat($("#birthdate").val());
     var params = {
         'fio': $("#fio").val(),
-        'birthdate': $("#birthdate").val()
-    }
+        'birthdate': bdate
+    };
+	//console.log(params);
 
     $.ajax({
         type: "POST",
         url: "./catalog_files/search.php",
         data: params
-    }).done(function(data) {
-        //console.log("Отправлено");
+    }).done(function(data) {        
         //console.log(data);
         var events = JSON.parse(data);
         var html = '';
@@ -80,13 +81,18 @@ $(".fancybox").fancybox({
 
 function isValidDate(val)
 {
-  var val_r = val.split("-");
-  var curDate = new Date(val_r[0], val_r[1], val_r[2]);
+  var val_r = val.split(".");
+  var curDate = new Date(parseInt(val_r[2]), parseInt(val_r[1])-1, parseInt(val_r[0]));
   return (
-    curDate.getFullYear() == val_r[0]
-    && curDate.getMonth() == val_r[1]
-    && curDate.getDate() == val_r[2]
+    curDate.getFullYear() == val_r[2]
+    && curDate.getMonth()+1 == val_r[1]
+    && curDate.getDate() == val_r[0]
   );
+};
+
+function dateFormat(val){
+    var val_r = val.split(".");
+    return val_r[2] + "-" + val_r[1] + "-" + val_r[0];
 };
 
 function toothFire(data){
@@ -108,10 +114,10 @@ function teethClear(){
 $("#regClient").submit(function() {
     params = $("#regClient").serialize();
     bdate = document.getElementsByName("Дата рождения:")[0].value;
-    //if (!isValidDate(bdate)){
-    //    alert("Неверный формат даты! Следуйте, пожалуйста, шаблону 'гггг-мм-дд'");
-    //    return;
-    //}
+    if (!isValidDate(bdate)){
+        alert("Неверный формат даты! Следуйте, пожалуйста, шаблону 'гггг-мм-дд'");
+        return;
+    }
     $.ajax({
         type: "POST",
         url: "./catalog_files/client_register.php",
@@ -142,4 +148,13 @@ $("#regClient").submit(function() {
         }, 1000);
     });
     return false;
+});
+
+jQuery(function( $ ){
+    $('#user_phone').each(function(){
+      $(this).mask("(999) 999-99-99");
+    });
+
+    $("#user_bdate").mask("99.99.9999",{placeholder:"dd.mm.yyyy"});
+    $("#birthdate").mask("99.99.9999",{placeholder:"dd.mm.yyyy"});
 });

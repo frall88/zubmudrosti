@@ -19,7 +19,7 @@
         <h3>Форма добавления новой записи в карту</h3>  
     <div class="newEvent">      
         <p><label for="Ид.Клиента">Ид.Пациента<input type="text" id="clientid" required=""></label></p>
-        <p><label for="Дата посещения">Дата посещения<input type="date" placeholder="гггг-мм-дд" id="visitdate"></label></p>
+        <p><label for="Дата посещения">Дата посещения<input type="text" required="" placeholder="dd.mm.yyyy" id="visitdate"></label></p>
         <p><label for="Тип операции">Тип операции<input type="text" id="opertype" required=""></label></p>
         <p><label for="Номер зуба">Номер зуба
             <select id="toothcode">
@@ -71,7 +71,8 @@
         <div id="eventResult"></div>
         <div class="clear"></div>
     </div>
-    <script src="./master_files/jquery-1.11.1.min.js"></script> 
+    <script src="./master_files/jquery-1.11.1.min.js"></script>
+    <script src="./catalog_files/jquery.maskedinput.js" type="text/javascript"></script>
     <script src="./master_files/main.js"></script>
 </body>
 </html>

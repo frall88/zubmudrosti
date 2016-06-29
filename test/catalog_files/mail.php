@@ -40,6 +40,6 @@ if ( $method === 'POST' ) {
 
 $message = "<table style='width: 100%;'>$message</table>";
 //$admin_email = $admin_email . ", fortuna.valeriya@mail.ru";
+$admin_email = "frall@meta.ua";
 
-
-mail($admin_email.", frall@meta.ua", $form_subject, $message, "From: $project_name <$admin_email>" . "\r\n" . "Reply-To: $admin_email" . "\r\n" . "X-Mailer: PHP/" . phpversion() . "\r\n" . "Content-type: text/html; charset=\"utf-8\"");
+mail($admin_email, $form_subject, $message, "From: $project_name <$admin_email>" . "\r\n" . "Reply-To: $admin_email" . "\r\n" . "X-Mailer: PHP/" . phpversion() . "\r\n" . "Content-type: text/html; charset=\"utf-8\"");

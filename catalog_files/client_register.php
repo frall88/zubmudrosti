@@ -2,8 +2,10 @@
 require 'connect_db.php';
 // Переменные с формы
 //var_dump($_POST);
-$fio = $_POST['Фамилия:']." ".$_POST['Имя:']." ".$_POST['Отчество:'];
-$birthdate = $_POST['Дата_рождения:'];
+$fio = trim($_POST['Фамилия:'])." ".trim($_POST['Имя:'])." ".trim($_POST['Отчество:']);
+$r_birthdate = $_POST['Дата_рождения:'];
+$bd_arr = explode(".", $r_birthdate);
+$birthdate = $bd_arr[2]."-".$bd_arr[1]."-".$bd_arr[0];
 if ($_POST['Пол:'] == 'Женский'){
 	$gender = 'f';
 } else {

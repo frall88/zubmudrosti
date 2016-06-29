@@ -2,13 +2,18 @@
    //Документация: http://api.jquery.com/jquery.ajax/
 function isValidDate(val)
 {
-  var val_r = val.split("-");
-  var curDate = new Date(parseInt(val_r[0]), parseInt(val_r[1])-1, parseInt(val_r[2]));
+  var val_r = val.split(".");
+  var curDate = new Date(parseInt(val_r[2]), parseInt(val_r[1])-1, parseInt(val_r[0]));
   return (
-    curDate.getFullYear() == val_r[0]
+    curDate.getFullYear() == val_r[2]
     && curDate.getMonth()+1 == val_r[1]
-    && curDate.getDate() == val_r[2]
+    && curDate.getDate() == val_r[0]
   );
+};
+
+function dateFormat(val){
+    var val_r = val.split(".");
+    return val_r[2] + "-" + val_r[1] + "-" + val_r[0];
 };
 
 function getNews(){
@@ -92,17 +97,16 @@ $("#doneClientButton").click(function() {
     return false;
 });
 
-$("#addEventButton").click(function() {
-
+$("#addEventButton").click(function() {    
     var params = {
         'clientid': $("#clientid").val(),
-        'visitdate': $("#visitdate").val(),
+        'visitdate': dateFormat($("#visitdate").val()),
         'opertype': $("#opertype").val(),
         'toothcode': $("#toothcode  option:selected").val(),
         'conclusion': $("#conclusion").val()
     };
-    if (!isValidDate(params.visitdate)){
-        alert("Неверный формат даты! Следуйте, пожалуйста, шаблону 'гггг-мм-дд'");
+    if (!isValidDate($("#visitdate").val())){
+        alert("Неверный формат даты! Следуйте, пожалуйста, шаблону 'дд.мм.гггг'");
         return;
     };
     console.log(params);
@@ -289,4 +293,8 @@ $(window).keydown(function(event){
     if(event.keyCode == 13) {   //если это Enter
         $('#edit').blur();  //снимаем фокус с поля ввода
     }
+});
+
+jQuery(function( $ ){
+    $("#visitdate").mask("99.99.9999",{placeholder:"dd.mm.yyyy"});    
 });
