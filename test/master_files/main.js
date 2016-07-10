@@ -97,6 +97,33 @@ $("#doneClientButton").click(function() {
     return false;
 });
 
+function deleteEvent(eventId, clid){
+    console.log('Want to delete - '+eventId);
+    var answer = confirm("Вы действительно хотите удалить запись с номером ["+eventId+"]?");
+    if (answer == true){
+        //console.log('YES!');
+        var params = {
+            'eventId': eventId
+        };
+        $.ajax({
+        type: "POST",
+        url: "./master_files/deleteEvent.php",
+        data: params
+        }).done(function(data) {
+            //console.log(data);
+            var recv = JSON.parse(data);
+            if (recv.rowcount > 0) {
+                alert('Запись удалена.');
+                searchResult(clid);
+            } else {
+                alert('Не удалось удалить запись: ' + recv.errmes);
+            };
+        });
+
+    }
+    
+};
+
 $("#addEventButton").click(function() {    
     var params = {
         'clientid': $("#clientid").val(),
@@ -205,9 +232,9 @@ $("#searchButton").click(function() {
     return false;
 });
 
-$("#searchResult").change(function() {
+function searchResult(clid){
     var params = {
-        'clid': $("#selectClient option:selected").val()
+        'clid': clid
     }
     $.ajax({
         type: "POST",
@@ -251,39 +278,35 @@ $("#searchResult").change(function() {
                 info.events[i].opertype + '</td><td>' +
                 info.events[i].toothcode + '</td><td>' +
                 info.events[i].conclusion + '</td><td>' +
-                '<button id="editEvent_' + info.events[i].id + '">Редактировать</button></td></tr>';
+                '<button id="editEvent_' + info.events[i].id + '" onclick="deleteEvent('+info.events[i].id +','+info.events[i].clientid+')">Удалить</button></td></tr>';
         }
         html += '</table>';
         $('#eventResult').html(html);
-    }).fail(function(x, t, r) {
-
-        console.log(x);
-        console.log(t);
-        console.log(r);
-
-    }).always(function() {
-        console.log('always');
     });
-    return false;
+};
+
+$("#searchResult").change(function() {
+    searchResult($("#selectClient option:selected").val());
 });
 
 
-
-$("#client td").click(function(e)   {
-    console.log('td catched');
-    //ловим элемент, по которому кликнули
-    var t = e.target || e.srcElement;
-    //получаем название тега
-    var elm_name = t.tagName.toLowerCase();
-    //если это инпут - ничего не делаем
-    if(elm_name == 'input') {return false;}
-    var val = $(this).html();
-    var code = '<input type="text" id="edit" value="'+val+'" />';
-    $(this).empty().append(code);
-    $('#edit').focus();
-    $('#edit').blur(function()  {
-        var val = $(this).val();
-        $(this).parent().empty().html(val);
+$(document).ready(function() {
+    $("td").click(function(e)   {
+        console.log('td catched');
+        //ловим элемент, по которому кликнули
+        var t = e.target || e.srcElement;
+        //получаем название тега
+        var elm_name = t.tagName.toLowerCase();
+        //если это инпут - ничего не делаем
+        if(elm_name == 'input') {return false;}
+        var val = $(this).html();
+        var code = '<input type="text" id="edit" value="'+val+'" />';
+        $(this).empty().append(code);
+        $('#edit').focus();
+        $('#edit').blur(function()  {
+            var val = $(this).val();
+            $(this).parent().empty().html(val);
+        });
     });
 });
 
