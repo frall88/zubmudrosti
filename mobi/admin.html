@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Стоматология в Днепропетровске - Зуб мудрости - персональный сайт практикующего стоматолога | Медицинские карты</title>
+		<link type="text/css" rel="stylesheet" href="./master_files/main.css">
+		<link rel="stylesheet" href="master_files/bootstrap-grid-3.3.1.min.css"> 
+	</head>
+	<body>
+		<section class="addNewPacient">
+			<div class="container">
+				<div class="row">
+					<h3>Новые пациенты для заполнения мед. карты</h3>
+					<div class="col-sm-12">
+						<input type="button" id="newsButton" class="button col-sm-12 col-xs-12" value="Просмотреть">
+						<div id="newsResult"></div>
+					</div>
+				</div>
+				<div class="row">
+					<h3>Отметить отработанного пациента</h3>
+					<p><input type="text" id="doneclid" required="" class="col-sm-12 col-xs-12" placeholder="ID пациента"></p>
+					<p><input type="button" id="doneClientButton" class="button col-sm-12 col-xs-12" value="Отработан"></p>
+				</div>
+			</div>
+		</section>
+		<h3>Форма добавления новой записи в катру</h3>
+		<section class="newEvent">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<p><input type="text" class="col-xs-12 col-sm-12" placeholder="ID пациента" id="clientid" required=""></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p><input type="text" class="col-xs-12 col-sm-12" required="" placeholder="dd.mm.yyyy" id="visitdate"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p><input type="text" class="col-xs-12 col-sm-12" id="opertype" placeholder="Тип операции" required=""></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p><select id="toothcode" class="col-xs-4 col-sm-2">
+							<option selected value="NULL">--</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>            
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="31">31</option>
+								<option value="32">32</option>
+								<option value="33">33</option>
+								<option value="34">34</option>
+								<option value="35">35</option>
+								<option value="36">36</option>
+								<option value="37">37</option>
+								<option value="38">38</option>
+								<option value="41">41</option>
+								<option value="42">42</option>
+								<option value="43">43</option>
+								<option value="44">44</option>
+								<option value="45">45</option>
+								<option value="46">46</option>
+								<option value="47">47</option>
+								<option value="48">48</option>
+							</select>
+							<label for="toothcode" class="toothcodeLab">Номер зуба</label>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p><input type="text" class="col-xs-12 col-sm-12" id="conclusion" placeholder="Заключение" required=""></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p><input type="button" id="addEventButton" class="button col-xs-6 col-sm-6" value="Добавить"></p>
+						<p><input type="button" id="clearEventButton" class="button col-xs-6 col-sm-6" value="Очистить"></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="search">
+			<h3>Введите ФИО пациента для поиска</h3>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<p><input type="text" class="col-xs-12 col-sm-12" name="fio" id="fio" placeholder="ФИО"></p>
+					</div>
+					<div class="col-sm-12">
+						<input type="button" id="searchButton" class="button col-xs-12 colsm-12" value="Поиск">
+					</div>
+					<div class="col-sm-12">
+						<div id="searchResult" class="col-xs-12 col-sm-12"></div>
+					</div>
+					<div class="col-sm-12">
+						<div id="eventResult"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Скрипты -->
+		<script src="./master_files/jquery-1.11.1.min.js"></script>
+		<script src="./master_files/jquery.label_better.js"></script>
+		<script src="./master_files/jquery.maskedinput.js" type="text/javascript"></script>
+		<script src="./master_files/main.js"></script>
+	</body>
+</html>

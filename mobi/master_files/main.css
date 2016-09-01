@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background: url(../img/background2.jpg) #7488c0 fixed;
+	padding: 25px 15px;
+}
+
+body {
+	background: white;
+	-webkit-box-shadow: 0 0 10px black;
+	-moz-box-shadow: 0 0 10px black;
+	-o-box-shadow: 0 0 10px black;
+	box-shadow: 0 0 10px black;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 0 10px 25px;
+}
+
+h1, h2, h3 {
+	display: block;
+	text-align: center;
+	margin: 20px 0;
+	font-size: 22px;
+}
+
+h3 {
+	color: #8B4513;
+}
+
+.addNewPacient, .newEvent {
+	border-bottom: 1px solid gray;
+	padding: 15px 0;
+}
+
+.button {
+	height: 40px;
+	border: 2px solid #b2d7ea;
+	/*border: none;*/
+	background: rgba(178, 215, 234, .6); /*#ffcc75; #EE9A49; */
+	color: grey;
+	/*text-shadow: 0 0 5px silver;*/
+	font-weight: bold;
+	text-transform: uppercase;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+	margin-top: 10px;
+}
+
+.button:hover  {
+	-webkit-box-shadow: 0 0 6px silver;
+	-moz-box-shadow: 0 0 6px silver;
+	-o-box-shadow: 0 0 6px silver;
+	box-shadow: 0 0 6px silver;
+	background: #b2d7ea;
+	color: white;
+	text-shadow: 1px 2px 3px grey;
+}
+
+.button:active {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	height: 40px;
+}
+
+input {
+	display: block;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	height: 40px;
+	font-size: 18px;
+	text-align: center;
+	border: 2px solid black;
+	outline: none;
+}
+
+input::-webkit-input-placeholder {
+	transition: all .2s linear;
+}
+
+input:focus {
+	text-align: left;
+	border: 1px solid #b2d7ea;
+    outline: none;
+	height: 60px;
+	font-size: 18px;
+	color: #787878;
+}
+
+input:focus::-webkit-input-placeholder {
+
+}
+
+data-new-placeholder {
+	font-size: 20px;
+	color: #c7bdbd;
+}
+
+input.button {
+	text-align: center;
+	height: 40px;
+	font-size: 16px;
+}
+
+.newEvent input {
+	margin: 10px 0;
+	text-align: center;
+	transition: all .2s linear;
+}
+
+.newEvent input:focus {
+	text-align: left;
+}
+
+.newEvent input.button:focus {
+	text-align: center;
+	height: 40px;
+}
+
+.toothcodeLab {
+	font-size: 16px;
+	color: darkgrey;
+	padding-left: 15px;
+	height: 30px;
+	line-height: 30px;
+}
+
+#selectClient, #toothcode {
+	height: 40px;
+	border: 2px solid black;
+	box-shadow: none;
+	text-align: center;
+	outline: none;
+}
+
+#toothcode {
+	height: 30px;
+}
+
+.newEvent select {
+	text-align: center;
+	font-size: 17px;
+}
+
+.newEvent #clearEventButton {
+	background: #f52323;
+	border: none;
+	color: white;
+}
+
+input.button:focus {
+  outline: none;  /* убрать рамку */
+}
+
+
+table caption {
+	padding: 15px;
+	font: italic 16px Georgia;
+}
+
+
+table {
+	margin-top: 15px;
+	color: gray;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+table td, table th{
+    /*border: 1px solid #ddd;*/
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+    height: 50px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+	border: 1px solid #ddd;
+	text-shadow: 1px 2px 3px gray;
+    background-color: #FFA54F;
+    color: white;
+}
+
+#searchResult {
+    margin-top: 10px;
+}
