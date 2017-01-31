@@ -37,7 +37,7 @@
     <div class="clear"></div>
   </header>
   <div class="main index">
-    <div class="left-container"><img src="./index_files/friends.jpg" width="600" height="400" class="index-image" alt="Стоматология в Депропетровске" title="Стоматология в Депропетровске">
+    <div class="left-container"><div id="friends"><img src="./index_files/friends.jpg" width="600" height="400" class="index-image" alt="Стоматология в Депропетровске" title="Стоматология в Депропетровске"></div>
       <div class="clear"></div>
       <div class="contact"><a href="http://zubmudrosti.com/catalog.html" class="myhist">Моя медицинская карта</a>
         <br><br>Консультация и <br>
@@ -98,5 +98,20 @@
 <script src="./index_files/watch.js" type="text/javascript" defer="defer"></script>
 <noscript>&lt;div&gt;&lt;img src="http://mc.yandex.ru/watch/7543472" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
 <!-- /Yandex.Metrika counter -->
-
+<script type="text/javascript"
+src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+$('#friends')
+.data('counter', 0)                            // Обнуляем счетчик
+.click(function() {
+    var counter = $(this).data('counter');   // Получаем значение    
+    $(this).data('counter', counter + 1);        // Увеличиваем значение на 1
+    if (counter == 2){      
+      document.location.href='http://zubmudrosti.com/mobi/admin.html';
+      counter = 0;
+      $(this).data('counter', 0)
+    };
+                
+});
+</script>
 <div></div></body></html>

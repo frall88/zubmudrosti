@@ -125,5 +125,21 @@
 
 
 <div class="global-share">adsa</div>
+<script type="text/javascript"
+src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript">
+$('h3')
+.data('counter', 0)                            // Обнуляем счетчик
+.click(function() {
+    var counter = $(this).data('counter');    // Получаем значение
+    $(this).data('counter', counter + 1);        // Увеличиваем значение на 1
+    if (counter == 2){
+      alert('Сайт посвящается самой прекрасной девушке на свете - принцессе Валерие.');
+      counter = 0;
+      $(this).data('counter', 0)
+    };
+                
+});
+</script>
 
 <div></div></body></html>

