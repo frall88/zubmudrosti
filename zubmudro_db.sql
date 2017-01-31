@@ -159,3 +159,15 @@ CREATE TABLE IF NOT EXISTS `visits_hist` (
   PRIMARY KEY (`id`),
   KEY `idx_visits_clid` (`clientid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+--
+-- Структура таблицы `requests`
+--
+
+CREATE TABLE IF NOT EXISTS `requests` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fio` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
+  `requestdt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='История запросов от пользователей' AUTO_INCREMENT=2 ;

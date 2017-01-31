@@ -8,6 +8,10 @@ if (strlen($fio) == 0){
 	echo '{"events":[-1]}';
 	return;
 };
+//for history
+$query = "INSERT INTO `requests`(`fio`, `birthdate`) VALUES ('$fio','$birthdate')";
+$res = mysql_query($query);
+
 $query = "SELECT IFNULL( MAX( clientid ) , -1 ) as clid FROM `clients` where fio = '$fio' and birthdate = '$birthdate'";
 $res = mysql_query($query);
 $row = mysql_fetch_array($res);
