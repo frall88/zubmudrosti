@@ -554,7 +554,12 @@ footer .autor a {
 }
 .main.index .left-container {
 	float: left;
-	width: 610px;
+	width: 760px;
+}
+.left-container img {
+	width: 700px;
+	height: 500px;
+	margin-left: 20px;
 }
 .main.index .left-container .index-image {
 	float: left;
@@ -568,18 +573,19 @@ footer .autor a {
 }
 .main.index .right-container {
 	float: left;
-	width: 500px;
+	width: 340px;
 	padding: 17px 20px;
 }
 .right-container .contact {
+
 	/*position: absolute;
 	bottom: 79px;
 	left: 81px;	
 	padding: 10px 122px 40px;*/
 	text-align: center;
 	color: #000;
-	font: italic 24px Georgia;	
-	background: none;	
+	font: italic 24px Georgia;
+	background: none;
 }
 .right-container .contact #lineless-button {
 	margin-top: 10px;
@@ -710,17 +716,26 @@ footer .autor a {
 .about-me .left {
 	width: 550px;
 }
+
 /*.contact {
-	padding: 10px 252px 40px;
-	background: url(http://zubmudrosti.com/i/content/contact/bg.jpg) 117px 32px no-repeat;
+padding: 10px 252px 40px;
+background: url(http://zubmudrosti.com/i/content/contact/bg.jpg) 117px 32px no-repeat;
 }
 .contact p {
-	color: #252C30;
-	font: 12px/20px Arial;
-	padding-left: 125px;
+color: #252C30;
+font: 12px/20px Arial;
+padding-left: 125px;
 }*/
-.contact p b {
-	font-weight: bold;
+.contact {
+	position: relative;
+	left: 300px;
+}
+.contact .myhist {
+	margin-left: -20px;
+}
+.contact p {
+	margin: 10px 0 10px -130px;
+	font-size: 16px;
 }
 .contact h3 {
 	color: #646464;
@@ -860,4 +875,11 @@ a.myhist:hover {
 a.myhist:active {
 	position: relative;
 	top: 1px;
+}
+#disqus_thread {
+	width: 300px;
+	float: right;
+}
+.pluso {
+	margin: 5px 0 0 25px;
 }
