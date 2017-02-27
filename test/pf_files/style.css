@@ -1,0 +1,369 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background: gray;
+}
+
+body {
+	width: 1200px;
+	margin: 15px auto;
+	-webkit-box-shadow: 0 23px 25px -23px black;
+	-moz-box-shadow: 0 23px 25px -23px black;
+	-o-box-shadow: 0 23px 25px -23px black;
+	box-shadow: 0 23px 25px -23px black;
+	background: rgba(255, 255, 255, 1);
+}
+
+h1, h2 {
+	text-shadow: 1px 2px 3px gray;
+}
+
+header {
+	height: 100px;
+	background: red;
+}
+
+header h1,
+header h2 {
+	color: white;
+	margin-left: 25px;
+}
+
+nav {
+	display: block;
+	width: inherit;
+	height: 50px;
+}
+
+nav ul {
+	display: block;
+	width: 300px;
+	height: inherit;
+	list-style: none; 
+	float: right;
+}
+
+nav ul li {
+	display: block;
+	float: left;
+	width: 140px;
+	height: 50px;
+	margin: 0 5px;
+	-webkit-transition: all .1s linear;
+	-moz-transition: all .1s linear;
+	-o-transition: all .1s linear;
+	transition: all .1s linear;
+}
+
+nav ul li.active {
+	border-bottom: 2px solid red;
+	height: 48px;
+}
+
+nav ul li:hover {
+	border-bottom: 2px solid red;
+	height: 48px;
+}
+
+nav ul li a {
+	display: block;
+	width: inherit;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+div.card {
+	display: block;
+	position: relative;
+	width: 270px;
+	height: 270px;
+	margin: 20px 10px 20px 20px;
+	float: left;
+	overflow: hidden;
+	-webkit-transition: all .2s .17s linear;
+	-moz-transition: all .2s .17s linear;
+	-o-transition: all .2s .17s linear;
+	transition: all .2s .17s linear;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 5px black;
+	-moz-box-shadow: 0 0 5px black;
+	-o-box-shadow: 0 0 5px black;
+	box-shadow: 0 0 5px black;
+}
+
+div.card:hover {
+	-webkit-box-shadow: 0 2px 15px gray;
+	-moz-box-shadow: 0 2px 15px gray;
+	-o-box-shadow: 0 2px 15px gray;
+	box-shadow: 0 2px 15px gray;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+@-webkit-keyframes second {
+	0% {
+		right: -270px;
+	}
+	20% {
+		right: -270px;
+	}
+	40% {
+		right: 0;
+	}
+	60% {
+		right: 0;
+	}
+	80% {
+		right: -270px;
+	}
+	100% {
+		right: -270px;
+	}
+}
+@-moz-keyframes second {
+	0% {
+		right: -270px;
+	}
+	20% {
+		right: -270px;
+	}
+	40% {
+		right: 0;
+	}
+	60% {
+		right: 0;
+	}
+	80% {
+		right: -270px;
+	}
+	100% {
+		right: -270px;
+	}
+}
+@-o-keyframes second {
+	0% {
+		right: -270px;
+	}
+	20% {
+		right: -270px;
+	}
+	40% {
+		right: 0;
+	}
+	60% {
+		right: 0;
+	}
+	80% {
+		right: -270px;
+	}
+	100% {
+		right: -270px;
+	}
+}
+@keyframes second {
+	0% {
+		right: -270px;
+	}
+	20% {
+		right: -270px;
+	}
+	40% {
+		right: 0;
+	}
+	60% {
+		right: 0;
+	}
+	80% {
+		right: -270px;
+	}
+	100% {
+		right: -270px;
+	}
+}
+
+div.card  img {
+	width: inherit;
+	height: inherit;
+	display: block;
+}
+
+div.card  img.cardImg {
+	width: inherit;
+	height: inherit;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -270px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-animation: second 10s infinite alternate ease-in-out;
+	-moz-animation: second 10s infinite alternate ease-in-out;
+	-o-animation: second 10s infinite alternate ease-in-out;
+	animation: second 10s infinite alternate ease-in-out;
+}
+
+div.card div.cardInfo {
+	display: block;
+	width: inherit;
+	height: 180px;
+	background: rgba(255, 255, 255, .5);
+	position: absolute;
+	top: 242px;
+	-webkit-transition: all .2s .1s linear;
+	-moz-transition: all .2s .1s linear;
+	-o-transition: all .2s .1s linear;
+	transition: all .2s .1s linear;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+div.card div.cardInfo h2 {
+	margin: 0 15px 5px;
+	text-align: center;
+	color: black;
+	border-bottom: 1px solid gray;
+}
+
+div.card div.cardInfo p {
+	width: 230px;
+	margin: auto;
+	text-align: justify;
+	color: #454545;
+}
+
+div.card:hover div.cardInfo {
+	top: 90px;
+	-webkit-box-shadow: 0 -10px 13px -10px black;
+	-moz-box-shadow: 0 -10px 13px -10px black;
+	-o-box-shadow: 0 -10px 13px -10px black;
+	box-shadow: 0 -10px 13px -10px black;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-o-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	background: rgba(255, 255, 255, .8);
+}
+
+footer {
+	height: 100px;
+	width: inherit;
+	border-top: 2px solid red;
+	background: black;
+	color: white;
+	position: relative;
+}
+
+footer p {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: inherit;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+div.fly {
+	position: fixed;
+	z-index: 100;
+	/*width: 1px;
+	height: 1px;
+	bottom: -1000px;
+	top: 50%;
+	left: 50%;
+	margin: -1px 0 0 -1px;*/
+	top: 50px;
+	left: 100%;
+	bottom: 50px;
+	display: block;
+	background: rgba(255, 255, 255, .95);
+	-webkit-box-shadow: 0 0 15px black;
+	-moz-box-shadow: 0 0 15px black;
+	-o-box-shadow: 0 0 15px black;
+	box-shadow: 0 0 15px black;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+	overflow: hidden;
+}
+
+div.fly:target {
+	top: 50px;
+	right: 25px;
+	bottom: 50px;
+	left: 25px;
+}
+
+div.fly span {
+	display: block;
+	width: 50px;
+	height: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: black;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	line-height: 22px;
+	border: 2px solid white;
+	-webkit-box-shadow: 0 0 10px gray;
+	-moz-box-shadow: 0 0 10px gray;
+	-o-box-shadow: 0 0 10px gray;
+	box-shadow: 0 0 10px gray;
+}
+
+div.fly span:hover {
+	cursor: pointer;
+	background: rgba(255, 0, 0, .8)
+}
+
+div.fly span:active {
+	-webkit-box-shadow: 0 0 1px gray;
+	-moz-box-shadow: 0 0 1px gray;
+	-o-box-shadow: 0 0 1px gray;
+	box-shadow: 0 0 1px gray;
+}
+
+div.fly img {
+	width: 50%;
+	height: 100%;
+	float: left;
+	/*margin: 100px 25px;*/
+	-webkit-box-shadow: 0 0 10px gray;
+	-moz-box-shadow: 0 0 10px gray;
+	-o-box-shadow: 0 0 10px gray;
+	box-shadow: 0 0 10px gray;
+}
+
+/*.animated {
+  -webkit-animation-duration: .6s;
+  -o-animation-duration: .6s;
+  -moz-animation-duration: .6s;
+  animation-duration: .6s;
+  
+  -webkit-animation-delay: .5s;
+  -o-animation-delay: .5s;
+  -moz-animation-delay: .5s;
+  animation-delay: .5s;
+}*/
