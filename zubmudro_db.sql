@@ -171,3 +171,25 @@ CREATE TABLE IF NOT EXISTS `requests` (
   `requestdt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='История запросов от пользователей' AUTO_INCREMENT=2 ;
+
+--
+-- Структура таблицы `portfolio`
+--
+
+CREATE TABLE IF NOT EXISTS `portfolio` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'порядковый номер',
+  `title` varchar(100) COLLATE utf8_unicode_ci NOT NULL COMMENT 'заголовок',
+  `description` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'описание',
+  `picture` longblob COMMENT 'фото работы',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Работы' AUTO_INCREMENT=1 ;
+
+--
+-- MIME-ТИПЫ ТАБЛИЦЫ `portfolio`:
+--   `desc`
+--       `Text_Plain`
+--   `description`
+--       `Text_Plain`
+--   `picture`
+--       `Image_JPEG`
+--
