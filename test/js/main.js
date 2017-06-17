@@ -2,7 +2,7 @@
 jQuery(function(f){
 	var element = f('.toTop');
 	f(window).scroll(function(){
-		element['fade'+(f(this).scrollTop() > 600 ? 'In': 'Out')](500);
+		element['fade'+(f(this).scrollTop() > 1000 ? 'In': 'Out')](500);
 	});
 });
 

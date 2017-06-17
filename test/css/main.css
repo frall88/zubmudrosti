@@ -18,7 +18,7 @@ h2 {
 main h2 {
 	margin: 100px 0 65px;
 	border-bottom: 1px solid black;
-	width: 80%;
+	width: 40%;
 	text-align: right;
 	text-transform: uppercase;
 }
@@ -211,7 +211,7 @@ nav ul li a {
 
 .bubble {
 	width: 100%;
-	height: 400px;
+	height: 200px;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
@@ -291,7 +291,7 @@ nav ul li a {
 }
 
 .prew img {
-	width: 150px;
+	width: 170px;
 	height: 200px;
 	float: left;
 	margin: 0 5px;
@@ -338,14 +338,10 @@ nav ul li a {
 .photo img {
 	height: auto;
 	width: 100%;
-	-webkit-box-shadow: 0 0 15px gray;
-	-moz-box-shadow: 0 0 15px gray;
-	-o-box-shadow: 0 0 15px gray;
-	box-shadow: 0 0 15px gray;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	border-radius: 50%;
+	-webkit-box-shadow: 0 0 6px black;
+	-moz-box-shadow: 0 0 6px black;
+	-o-box-shadow: 0 0 6px black;
+	box-shadow: 0 0 6px black;
 	-webkit-transition: all .2s linear;
 	-moz-transition: all .2s linear;
 	-o-transition: all .2s linear;
@@ -353,10 +349,15 @@ nav ul li a {
 }
 
 .photo img:hover {
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	-o-border-radius: 0;
-	border-radius: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 0 15px gray;
+	-moz-box-shadow: 0 0 15px gray;
+	-o-box-shadow: 0 0 15px gray;
+	box-shadow: 0 0 15px gray;
+	transform: scale(1.2);
 }
 
 .activity .record .description {
@@ -472,6 +473,19 @@ box-shadow: 1px -1px 2px rgba(0, 0, 0, .2),
 	box-shadow: 0 0 15px black;
 }
 
+::-webkit-input-placeholder {
+	text-align: center;
+}
+::-moz-placeholder {
+	text-align: center;
+}
+:-moz-placeholder {
+	text-align: center;
+}
+:-ms-input-placeholder {
+	text-align: center;
+}
+
 .toTop {
 	display: none;
 	width: 50px;
@@ -555,16 +569,10 @@ form#visitWriteFooter {
 	margin-top: 25px;
 }
 
-form#visitWriteFooter input,
-form#visitWriteFooter textarea {
+form#visitWriteFooter input{
 	width: 100%;
 	color: black;
-}
-
-form#visitWriteFooter input[placeholder],
-form#visitWriteFooter textarea[placeholder] {
-	font-style: italic;
-	text-overflow:ellipsis;
+	text-align: left;
 }
 
 form#visitWriteFooter button {
@@ -582,18 +590,87 @@ form#visitWriteFooter button {
 }
 
 /* ---------------- pop-up FORM ---------------- */
-form#visitWrite {
-	width: auto;
+form fieldset {
+	border: 1px solid #3f77de;
+	margin: 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
 }
 
-form#visitWrite label {
-	text-transform: uppercase;
-	color: #41426a;
+form fieldset legend {
+	padding: 5px 10px;
+	text-align: right;
 }
 
 form#visitWrite input,
+form#regClient input,
+form#visitWrite textarea {
+	border: 1px solid #3f77de;
+	transition: all .2s linear;
+	width: 50%;
+	float: right;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+form#visitWrite input:focus,
+form#regClient input:focus,
+form#visitWrite textarea:focus {
+	border: none;
+	border-left: 2px solid #3f77de;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+}
+
+form#visitWrite textarea {
+	height: 100px;
+}
+
+form#regClient select {
+	float: right;
+}
+
 form#visitWrite button,
-form#visitWrite textarea,
+form#regClient button {
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	color: white;
+	border: 2px solid white;
+	background: #3f77de;
+	box-shadow: 0 0 6px gray;
+	margin: 5px 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+form#visitWrite button:active,
+form#regClient button:active {
+	box-shadow: none;
+	border-color: #3f77de;
+	color: #3f77de;
+	background: white;
+}
+
+form#visitWrite button:focus,
+form#regClient button:focus,
+form#visitWrite input:focus,
+form#regClient input:focus,
+form#visitWrite textarea:focus {
+	outline: 0;
+	outline-offset: 0;
+}
+
+/*----*/
+
 form#visitWriteFooter input,
 form#visitWriteFooter button,
 form#visitWriteFooter textarea {
@@ -605,8 +682,6 @@ form#visitWriteFooter textarea {
 	text-align: center;
 }
 
-form#visitWrite input,
-form#visitWrite textarea,
 form#visitWriteFooter input,
 form#visitWriteFooter textarea {
 	width: 280px;
@@ -619,41 +694,6 @@ form#visitWriteFooter textarea {
 	transition: all .2s linear;
 }
 
-form#visitWrite textarea,
-form#visitWriteFooter textarea {
-	height: 80px;
-}
-
-form#visitWrite input:focus,
-form#visitWrite textarea:focus {
-	height: 40px;
-	width: 300px;
-	margin: 5px 0;
-	outline: none;
-	border: 2px solid #3f77de;
-	text-align: left;
-}
-
-form#visitWrite textarea:focus {
-	height: 100px;
-}
-
-form#visitWrite button {
-	width: 100px;
-	height: 40px;
-	float: right;
-	margin: 10px;
-	background: #3f77de;
-	color: white;
-	border: 2px solid white;
-	font-weight: bold;
-	-webkit-box-shadow: 0 0 6px gray;
-	-moz-box-shadow: 0 0 6px gray;
-	-o-box-shadow: 0 0 6px gray;
-	box-shadow: 0 0 6px gray;
-}
-
-form#visitWrite button:active,
 form#visitWriteFooter button:active {
 	color: #3f77de;
 	background: white;
@@ -662,4 +702,8 @@ form#visitWriteFooter button:active {
 	-moz-box-shadow: 0 0 3px gray;
 	-o-box-shadow: 0 0 3px gray;
 	box-shadow: 0 0 3px gray;
+}
+
+.clear {
+	clear: both;
 }

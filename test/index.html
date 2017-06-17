@@ -119,6 +119,16 @@
 											</p>
 										</div>
 									</div>
+									<div class="record col-lg-12 col-md-12 col-sm-12">
+										<div class="photo col-lg-4 col-md-4 col-sm-4 col-xs-4">
+											<a href="img\pf\2402_2.png" class="fancybox"><img src="img\pf\2402_2.png" alt="img_pf"></a>
+										</div>
+										<div class="description col-lg-8 col-md-8 col-sm-8 col-xs-8">
+											<p>
+												Лечение каналов и пломбировка
+											</p>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="response col-lg-6 col-md-6 col-sm-12">
@@ -138,7 +148,7 @@
 									<a href="#regClient" class="fancybox" title="Форма регистрации пациента"><b>регистрация пациента</b></a>
 								</div>
 								<div class="card col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-8 col-sm-offset-2">
-									<a href="#" class="fancybox" title="Моя мед. карта"><b>моя мед. карта</b></a>
+									<a href="#myCard" class="fancybox" title="Моя мед. карта"><b>моя мед. карта</b></a>
 								</div>
 							</div>
 						</div>
@@ -364,12 +374,11 @@
 									<label><input type="text" name="Имя:" placeholder="" required="">имя</label><br>
 									<label><input type="email" name="E-mail:" placeholder="">e-Mail</label><br>
 									<label><input type="tel" name="Телефон:" placeholder="(000) 000-00-00" required="">номер&nbsp;телефона</label><br>
-									<label><textarea name="Услуга:" placeholder="Укажите краткую информацию о проблеме ..." required=""></textarea>Что&nbsp;беспокоит?</label><br>
 									<button class="button" type="submit">записаться</button>
 								</form>
 							</div>
 							<div class="contacts col-lg-6 col-md-6 col-sm-12">
-								<iframe src="https://api-maps.yandex.ua/frame/v1/-/C6uqNZNu" width="100%" height="350" frameborder="0"></iframe>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.314041785172!2d35.01782533776011!3d48.52721308271806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d958b37ac4f005%3A0x3072e6500119d1d4!2z0L_RgNC-0YHQv9C10LrRgiDQnNC40YDRgywgMzUsINCU0L3RltC_0YDQvsyBLCDQlNC90ZbQv9GA0L7Qv9C10YLRgNC-0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sua!4v1496642511341" allowfullscreen></iframe>
 								<ul>
 									<li>Фортуна Валерия Сергеевна</li>
 									<li><span>&#9742;</span>&emsp;(096) 882-30-28</li>
@@ -394,18 +403,20 @@
 				<!-- END Hidden Required Fields -->
 				
 				<fieldset>
-					<legend>ФИО:</legend>
-					<label>имя<input type="text" name="Имя:" placeholder="" required=""></label><br>
-					<label>фамилия<input type="text" name="Фамилия:" placeholder="" required=""></label><br>
+					<legend>личные данные:</legend>
+					<p><label>имя<input type="text" name="Имя:" placeholder="" required=""></label></p><br>
+					<div class="clear"></div>
+					<p><label>фамилия<input type="text" name="Фамилия:" placeholder="" required=""></label></p><br>
 				</fieldset>
 				<fieldset>
-					<legend>Контакты:</legend>
-					<label>e-Mail<input type="email" name="E-mail:" placeholder=""></label><br>
-					<label>номер телефона<input type="tel" name="Телефон:" placeholder="(000) 000-00-00" required=""></label><br>
+					<legend>контакты:</legend>
+					<p><label>e-Mail<input type="email" name="E-mail:" placeholder=""></label></p><br>
+					<div class="clear"></div>
+					<p><label>номер телефона<input type="tel" name="Телефон:" placeholder="(000) 000-00-00" required=""></label></p><br>
 				</fieldset>
 				<fieldset>
-					<legend>Причина обращения:</legend>
-					<label>Что беспокоит?<textarea name="Услуга:" placeholder="Укажите краткую информацию о проблеме ..." required=""></textarea></label><br>
+					<legend>причина обращения:</legend>
+					<label>что беспокоит?<textarea name="Услуга:" placeholder="" required=""></textarea></label><br>
 				</fieldset>
 				<button class="button" type="submit">записаться</button>
 			</form>
@@ -418,26 +429,33 @@
 				<input type="hidden" name="form_subject" value="Регистрация пациента">
 				<!-- END Hidden Required Fields -->
 				<fieldset>
-					<legend>Личные данные</legend>
-					<p><label for="Фамилия">Фамилия</label><input type="text" name="Фамилия:" required=""></p><br>
+					<legend>личные данные:</legend>
+					<p><label for="Фамилия">фамилия</label><input type="text" name="Фамилия:" required=""></p><br>
 					<div class="clear"></div>
-					<p><label for="Имя">Имя</label><input type="text" name="Имя:" required=""></p><br>
+					<p><label for="Имя">имя</label><input type="text" name="Имя:" required=""></p><br>
 					<div class="clear"></div>
-					<p><label for="Отчество">Отчество</label><input type="text" name="Отчество:" required=""></p><br>
+					<p><label for="Отчество">отчество</label><input type="text" name="Отчество:" required=""></p><br>
 					<div class="clear"></div>
-					<p><label for="Дата рождения">Дата Вашего рождения</label><input type="text"  placeholder="dd.mm.yyyy" name="Дата рождения:" required="" id="user_bdate"></p><br>
+					<p><label for="Дата рождения">дата рождения</label><input type="text"  placeholder="dd.mm.yyyy" name="Дата рождения:" required="" id="user_bdate"></p><br>
 					<div class="clear"></div>
-					<p><label for=" Пол">Укажите Ваш пол</label><select size="1" name="Пол:"><option selected>Мужской</option><option>Женский</option></select></p><br>
+					<p><label for=" Пол">укажите Ваш пол</label><select size="1" name="Пол:"><option selected>мужской</option><option>женский</option></select></p><br>
 					<!--<p><label for="Пол">Укажите Ваш пол</label><input type="text" name="Пол:" placeholder="М / Ж" required=""></p><br>-->
 				</fieldset>
 				<fieldset>
-					<legend>Контактные данные</legend>
+					<legend>контакты:</legend>
 					<p><label for="Телефон">№ телефона</label><input type="tel" name="Телефон:" required="" pattern="\(\d\d\d\) ?\d\d\d-\d\d-\d\d" title="Формат: (096) 999-99-99" placeholder="(___) ___-__-__" id="user_phone"></p><br>
 					<div class="clear"></div>
 					<p><label for="E-mail">E-Mail</label><input type="email" name="E-mail:" required=""></p><br>
 				</fieldset>
-				<button class="button" type="submit">Зарегистрироваться</button>
+				<button class="button" type="submit">зарегистрироваться</button>
 			</form>
+			<div id="myCard">
+				<h2>Введите ФИО и дату рождения для поиска</h2>
+				<input type="text" name="fio" id="fio">
+				<input type="text" name="birthdate" id="birthdate" placeholder="dd.mm.yyyy">
+				<input type="button" id="searchButton" value="Поиск">
+				<div id="eventResult"></div>
+			</div>
 		</div>
 
 		<!--[if lt IE 9]>
